@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonList, IonInput, IonItem, IonLabel, IonIcon } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonList, IonItem, IonLabel, IonIcon } from '@ionic/angular/standalone';
 
 import { NgFor } from '@angular/common';
 import { Movie } from '../services/movie';
@@ -13,7 +13,7 @@ import {heart} from 'ionicons/icons';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [FormsModule, NgFor,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonList, IonItem, IonLabel, IonButtons, IonIcon, RouterLink],
+  imports: [FormsModule, NgFor,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonList, IonItem, IonLabel, IonButtons, IonIcon, RouterLink],
 })
 export class HomePage {
   constructor(private movieService:Movie, private router: Router) {
