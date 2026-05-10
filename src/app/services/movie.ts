@@ -21,6 +21,14 @@ export class Movie {
     })
     return response.data;
   } 
+
+  async getMovieDetails(id: number) {
+    const response: HttpResponse = await CapacitorHttp.get({
+      url: `${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`
+    });
+    return response.data;
+  }
+
   async getMovieCredits(id: number){
     const response: HttpResponse = await CapacitorHttp.get({
       url: `${this.baseUrl}/movie/${id}/credits?api_key=${this.apiKey}`

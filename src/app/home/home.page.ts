@@ -5,7 +5,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, Ion
 
 import { NgFor } from '@angular/common';
 import { Movie } from '../services/movie';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { addIcons } from 'ionicons';
 import {heart} from 'ionicons/icons';
 
@@ -13,7 +13,7 @@ import {heart} from 'ionicons/icons';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [NgFor,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonList, IonItem, IonLabel, IonButtons, IonIcon],
+  imports: [FormsModule, NgFor,IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonInput, IonList, IonItem, IonLabel, IonButtons, IonIcon, RouterLink],
 })
 export class HomePage {
   constructor(private movieService:Movie, private router: Router) {
@@ -34,6 +34,7 @@ export class HomePage {
   }
 
   async search() {
+    console.log('Search query:', this.searchQuery);
     if (this.searchQuery.trim() === '') {
       await this.loadTrendingMovies();
     } else {

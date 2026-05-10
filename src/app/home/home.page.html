@@ -2,6 +2,9 @@
   <ion-toolbar>
     <ion-title>{{studentNumber}}</ion-title>
     <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
       <ion-button routerLink="/favourites">
         <ion-icon name="heart"></ion-icon>
       </ion-button>
@@ -10,7 +13,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-input placeholder="Search Movie Name"(ionInput)="searchQuery"></ion-input>
+  <input type="text" placeholder="Search Movie Name" [(ngModel)]="searchQuery">
+
   <ion-button expand="full" (click)="search()">SEARCH</ion-button>
 
   <p>{{searchQuery ? searchQuery + ' Movies' : "Today's Trending Movies"}}</p>
