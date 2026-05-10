@@ -51,14 +51,12 @@ export class MovieDetailsPage implements OnInit {
   isFavourite: boolean = false;
 
 async addToFavourites() {
-  // We'll implement this in Sprint 6
-  // For now just toggle the boolean
+  // To be implemented in Sprint 6
   this.isFavourite = true;
 }
 
 async removeFromFavourites() {
-  // We'll implement this in Sprint 6
-  // For now just toggle the boolean
+  // To be implemented in Sprint 6
   this.isFavourite = false;
 }
 }
