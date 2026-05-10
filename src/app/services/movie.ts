@@ -6,8 +6,8 @@ import { CapacitorHttp, HttpResponse } from '@capacitor/core';
 })
 export class Movie {
 
-  private apiKey = null; // change afterwards
-  private baseUrl = 'https://api.themoviedb.org/3';
+  private readonly apiKey = '6bb6d5209b524c1da732c79c5ad5d126';
+  private readonly baseUrl = 'https://api.themoviedb.org/3';
 
   async getTrendingMovies(){
     const response: HttpResponse = await CapacitorHttp.get({
